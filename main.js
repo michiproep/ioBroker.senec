@@ -459,7 +459,7 @@ class Senec extends utils.Adapter {
 			this.log.info('Usage of SENEC App API not configured or not connected.');
 			return;
 		}
-		const interval = this.config.api_interval * 60000;
+		const interval = this.config.api_interval * 1000;
 		const dates = new Map([
 			["THIS_DAY", new Date().toISOString().split('T')[0]],
 			["LAST_DAY", new Date(new Date().setDate(new Date().getDate()-1)).toISOString().split('T')[0]],
